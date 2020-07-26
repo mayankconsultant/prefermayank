@@ -1,8 +1,92 @@
 :root {
   --prim_background: #000;
   --sec_background: #8b9292;
+
+  --color_prim: whitesmoke;
+  --color_sec: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  /* border: 1px solid var(--color_prim); */
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 30em;
 }
 
 body {
-  background: (var(--prim_background);
+  background: var(--prim_background);
+}
+
+hr {
+  color: tomato;
+}
+.textimg {
+  margin: 10px;
+  width: 100%;
+  background-image: url("../img/me_front.jpg");
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Full height */
+  height: 100%;
+  position: absolute;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title {
+  color: var(--color_prim);
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: bolder;
+  /* border: 3px solid #f1f1f1; */
+  position: relative;
+  top: 50%;
+  left: 60%;
+  overflow-wrap: normal;
+  transform: translate(-50%, -50%);
+
+  width: 55%;
+  /* padding: 20px; */
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 20;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 50px;
+}
+
+.title h3 {
+  font-size: 50px;
+}
+
+.myname {
+  color: rgb(245, 19, 245);
+}
+.title p u {
+  font-size: large;
+
+  padding: 10px;
+  margin: 10px;
+  color: turquoise;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 300px) {
+  .title {
+    width: 100%;
+  }
 }
