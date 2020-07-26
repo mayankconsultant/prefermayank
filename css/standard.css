@@ -1,0 +1,8 @@
+:root {
+  --prim_background: #000;
+  --sec_background: #8b9292;
+}
+
+body {
+  background: (var(--prim_background);
+}
