@@ -50,10 +50,10 @@ hr {
   color: var(--color_prim);
   background-color: rgba(0, 0, 0, 0.6);
   font-weight: bolder;
-  /* border: 3px solid #f1f1f1; */
-  position: relative;
+  border: 3px solid #f1f1f1;
+  position: absolute;
   top: 50%;
-  left: 60%;
+  left: 65%;
   overflow-wrap: normal;
   transform: translate(-50%, -50%);
 
@@ -63,6 +63,9 @@ hr {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   z-index: 20;
   margin-bottom: 20px;
+  -webkit-box-shadow: 45px 35px 27px -21px rgba(210, 195, 217, 0.89);
+  -moz-box-shadow: 45px 35px 27px -21px rgba(210, 195, 217, 0.89);
+  box-shadow: 45px 35px 27px -21px rgba(210, 195, 217, 0.89);
 }
 
 .title h1 {
