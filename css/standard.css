@@ -91,5 +91,6 @@ hr {
 @media screen and (max-width: 300px) {
   .title {
     width: 100%;
+    position: absolute;
   }
 }
