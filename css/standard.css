@@ -1,6 +1,6 @@
 :root {
   --prim_background: #000;
-  --sec_background: #8b9292;
+  --sec_background: white;
 
   --color_prim: whitesmoke;
   --color_sec: #000;
@@ -12,12 +12,31 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  /* border: 1px solid var(--color_prim); */
-  position: absolute;
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.showcase {
   width: 100%;
-  overflow: hidden;
-  height: 30em;
+  height: 400px;
+  background: url("../img/rock-5266516_1920.jpg");
+  padding: 10px 0px;
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  color: whitesmoke;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.showcase h2,
+.showcase p {
+  margin-bottom: 10px;
 }
 
 body {
@@ -30,21 +49,28 @@ hr {
 .textimg {
   margin: 10px;
   width: 100%;
-  background-image: url("../img/me_front.jpg");
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 400px;
+  background: url("../img/me_front.jpg") no-repeat center center/cover;
+
   /* Add the blur effect */
   filter: blur(1px);
   -webkit-filter: blur(1px);
+  padding: 10px 0px;
+  margin: 25px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
 
   /* Full height */
-  height: 100%;
-  position: absolute;
+  /* height: 100%; */
+  /* position: absolute; */
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .title {
   color: var(--color_prim);
@@ -88,9 +114,201 @@ hr {
   overflow-wrap: break-word;
 }
 
-@media screen and (max-width: 300px) {
+.container2 {
+  /* position: absolute; */
+  display: grid;
+  /* width: 90%; */
+  /* transform: translate(5%); */
+  justify-content: flex-start;
+  align-items: stretch;
+
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "radio card1 card2 card3"
+    "radio card4 card5 card6";
+  border: 5px solid white;
+  grid-template-rows: 2fr;
+  /* margin-left: 10px; */
+  /* margin-top: 32em; */
+}
+
+.card4 {
+  grid-area: card4;
+}
+.radio {
+  color: whitesmoke;
+  grid-area: radio;
+  width: 100%;
+  display: table-row;
+  text-decoration: none;
+}
+
+.radio label {
+  display: block;
+  border: 1px solid white;
+  padding: 5px 5px;
+  margin: 10px;
+  text-align: center;
+  background: lightseagreen;
+}
+
+.card1 {
+  grid-area: card1;
+}
+.card3 {
+  grid-area: card3;
+}
+
+.cards {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.cards:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgb(10, 188, 194);
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+/* card2  */
+
+.card2 {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  grid-area: card2;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+
+.follow {
+  /* position: absolute; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
+  margin: 30px 0px 30px;
+}
+
+.follow * {
+  margin-right: 10px;
+}
+
+/* links */
+
+.links {
+  background: lightsteelblue;
+  /* display: flex; */
+}
+
+.links-inner {
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.links-inner ul {
+  text-transform: uppercase;
+  font-size: medium;
+  text-align: center;
+}
+
+.links-inner li {
+  text-transform: uppercase;
+  font-size: small;
+  padding-left: 10px;
+  text-align: left;
+  /* list-style: circle; */
+}
+
+.links-inner h3 {
+  list-style: none;
+  text-align: left;
+}
+
+.main-footer {
+  background: #f2f2f2;
+  font-size: 12px;
+  padding: 20px 0px;
+}
+
+.inner-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 380px) {
   .title {
     width: 100%;
     position: absolute;
+  }
+
+  .container2 {
+    grid-template-columns: 2fr;
+    grid-template-areas:
+      "radio"
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+  }
+
+  .hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .radio label {
+    width: 80%;
+  }
+
+  .follow {
+    flex-direction: column;
+  }
+  .links-inner {
+    flex-direction: column;
   }
 }
