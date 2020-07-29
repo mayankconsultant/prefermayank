@@ -4,27 +4,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prefer Mayank</title>
     <link rel="stylesheet" href="css/standard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <header class="textimg">
-        <div class="title">
-          <h1>Hello, I Am <span class="myname">Mayank H Shah.</span></h1>
-          <hr />
-          <br />
-          <p>
-            <u>Analyst , Programmer , Poet , Leader and Learner </u>
-          </p>
-        </div>
-      </header>
+      <div class="textimg"></div>
+      <div class="title">
+        <h1>Hello, I Am <span class="myname">Mayank H Shah.</span></h1>
+        <hr />
+        <br />
+        <p>
+          <u>Analyst , Programmer , Poet , Leader and Learner </u>
+        </p>
+      </div>
 
       <section class="container2">
         <div class="radio">
+          
           <input
             class="radio_input"
             type="radio"
             value="Employers"
-            checked="checked"
+           
             name="my_radio"
             id="radio_1"
             onchange="message(1)"
@@ -43,19 +50,22 @@
             class="radio_input"
             type="radio"
             value="Roles"
+            checked="checked"
             name="my_radio"
             id="radio_3"
             onchange="message(3)"
           />
-          <label class="label1" for="radio_3">Roles</label>
+          <label class="label1" for="radio_3">Experience/Achivements</label>
         </div>
 
         <!-- cards start  here  -->
         <div class="cards">
-          <div class="card1" ontouchstart="this.classList.toggle('hover');">
+        <div class="card1 employer hides" id="employer" ontouchstart="this.classList.toggle('hover');">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <h1>Ericsson-Du-Dubai</h1>
+                <div class="circle">
+                <h1>Ericsson, Du, Dubai</h1>
+              </div>
                 <p>2008-2009</p>
                 <p>Role : Consultant for Production Support</p>
               </div>
@@ -68,115 +78,266 @@
               </div>
             </div>
           </div>
+          <div class="card1 skill hides" id="skill1" ontouchstart="this.classList.toggle('hover');">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Oracle - SQL </h1>
+              <p>2005-Till Date</p>
+              <p>Level :Expert and Experienced</p>
+            </div>
+            <div class="flip-card-back">
+              <h1>
+                Achivements:
+              </h1>
+              <p>* Daily routine queries</p>
+              <p>* Reporting Queries</p>
+              <p>* Tunning</p>
+              <p>* Analytic Queries</p>
+              <p>* Views , Triggers, Data Movement </p>
+            </div>
+          </div>
         </div>
-        <!-- 2nd  
+        <!-- role1  -->
+        <div class="card1 role " id="role1" ontouchstart="this.classList.toggle('hover');">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>15+ Experience in Telecom Billing System</h1>
+                <p>2005-Till Date &  counting ...</p>
+                
+              </div>
+              <div class="flip-card-back long">
+                <h1>
+                 Speciality:
+                </h1>
+                <p>Operation Support. </p>
+                <p></p>
+                <p>Team Leader</p>
+                <p></p>
+                <p>Integrator</p>
+                <p></p>
+                <p>Trainning</p>
+                <p></p>
+                <p>Consultation</p>
+                     <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+          <!-- 2nd  
+       -->
+        <div class="cards card2 employer hides" id="employer2" ontouchstart="this.classList.toggle('hover');">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h1>Atos, India ,Mumbai</h1>
+                  <p>Role: System Analyst (2007-2008)</p>
+                  <p>Role: Team Leader (2014-2015)</p>                  
+                </div>
+                <div class="flip-card-back">
+                  <h1>
+                    Responsibilities:
+                  </h1>
+                  <p>
+                    • Planning for CR, Resource allocation, Reports, CR follow
+                    ups and Team Mangement.
+                  </p>
+                  <p>
+                    • Documentation, Feasibility checks, task scheduling, task
+                    distribution and Task completion.
+                  </p>
+                  <p>
+                    * • Manage Resources , Logistics , vendors and Tools needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+        
+          <div class="cards card2 skill hides" id="skill2" ontouchstart="this.classList.toggle('hover');">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Oracle -PL/SQL </h1>
+                <p>2005-Till Date</p>
+                <p>Level :Expert and Experienced</p>
+              </div>
+              <div class="flip-card-back">
+                <h1>
+                  Achivements:
+                </h1>
+                <p>* Automate Daily,Weekly , Monthly Reports</p>
+                <p>* Bulk Transactions</p>
+                <p>* Tunning</p>
+                <p>* Oracle Packages</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="cards card2 role " id="role2" ontouchstart="this.classList.toggle('hover');">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>Bachelor of Engineering (Computers) </h1>
+                <p>2004</p>
+                <p>Secured First Class</p>
+              </div>
+              <div class="flip-card-back long">
+                <h1>
+                  Achivements:
+                </h1>
+                <p>Programming</p>
+                <p> Problem Solving Techniques</p>
+                <p>Issue resolve</p>
+                
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- card3
        -->
 
-        <div class="card2" ontouchstart="this.classList.toggle('hover');">
-          <div class="cards">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h1>Atos, India ,Mumbai</h1>
-                <p>2007-2008</p>
-                <p>2014-2015</p>
-                <p>Role : System Analyst</p>
-                <p>Role: Team Leader</p>
-              </div>
-              <div class="flip-card-back">
-                <h1>
-                  Responsibilities:
-                </h1>
-                <p>
-                  • Planning for CR, Resource allocation, Reports, CR follow ups
-                  and Team Mangement.
-                </p>
-                <p>
-                  • Documentation, Feasibility checks, task scheduling, task
-                  distribution and Task completion.
-                </p>
-                <p>
-                  * • Manage Resources , Logistics , vendors and Tools needed.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- card3
-       -->
-
-        <div class="card3" ontouchstart="this.classList.toggle('hover');">
-          <div class="cards">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h1>Huawei,Sudan</h1>
-                <p>2016-2019</p>
-                <p>Role : Billing Consultant</p>
-              </div>
-              <div class="flip-card-back">
-                <h1>
-                  Responsibilities:
-                </h1>
-                <p>
-                  • Planning for CR, Resource allocation, Reports, CR follow ups
-                  and Team Mangement.
-                </p>
-                <p>
-                  • Documentation, Feasibility checks, task scheduling, task
-                  distribution and Task completion.
-                </p>
-                <p>
-                  * • Manage Resources , Logistics , vendors and Tools needed.
-                </p>
+          <div class="card3 employer hides" ontouchstart="this.classList.toggle('hover');">
+            <div class="cards">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h1>Huawei, Zain,Sudan</h1>
+                  <p>2016-2019</p>
+                  <p>Role : Billing Consultant</p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>
+                    Responsibilities:
+                  </h1>
+                  <p>
+                    • Planning for CR, Resource allocation, Reports, CR follow
+                    ups and Team Mangement.
+                  </p>
+                  <p>
+                    • Documentation, Feasibility checks, task scheduling, task
+                    distribution and Task completion.
+                  </p>
+                  <p>
+                    * • Manage Resources , Logistics , vendors and Tools needed.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- card4 -->
-
-        <div class="card4" ontouchstart="this.classList.toggle('hover');">
-          <div class="cards">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <h1>Zain, South Sudan</h1>
-                <p>2016-2019</p>
-                <p>Role : Senior Billing Specialist</p>
-              </div>
-              <div class="flip-card-back">
-                <h1>
-                  Responsibilities:
-                </h1>
-                <p>
-                  • Planning for CR, Resource allocation, Reports, CR follow ups
-                  and Team Mangement.
-                </p>
-                <p>
-                  • Documentation, Feasibility checks, task scheduling, task
-                  distribution and Task completion.
-                </p>
-                <p>
-                  * • Manage Resources , Logistics , vendors and Tools needed.
-                </p>
+          <div class="card3 skill hides" ontouchstart="this.classList.toggle('hover');">
+            <div class="cards">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h1>Shell Scripts</h1>
+                  <p>2007-Till Date</p>
+                  
+                </div>
+                <div class="flip-card-back">
+                  <h1>
+                    Achivements:
+                  </h1>
+                  <p>
+                    • Automation of Rating scripts.
+                  </p>
+                  <p>
+                    • Need based resolution of issues
+                  </p>
+                  <p>
+                    • Daily &  routine Tasks.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+          <!-- role card3  -->
+          <div class="card3 role" ontouchstart="this.classList.toggle('hover');">
+            <div class="cards">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h1>Prince 2 Foundation Certification</h1>
+                  <p>2017</p>
+                  
+                </div>
+                <div class="flip-card-back long">
+                  <h1>
+                    Achivements:
+                  </h1>
+                  <p>
+                    • Can work on 7 Principles of Prince2 
+                  </p>
+                  <p>
+                    • Quality Assurance
+                  </p>
+                  <p>
+                    • Risks and Mitigations
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- card4 -->
+
+          <div class="card4 employer hides" ontouchstart="this.classList.toggle('hover');">
+            <div class="cards">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <h1>Zain, South Sudan</h1>
+                  <p>2016-2019</p>
+                  <p>Role : Senior Billing Specialist</p>
+                </div>
+                <div class="flip-card-back">
+                  <h1>
+                    Responsibilities:
+                  </h1>
+                  <p>
+                    • Planning for CR, Resource allocation, Reports, CR follow
+                    ups and Team Mangement.
+                  </p>
+                  <p>
+                    • Documentation, Feasibility checks, task scheduling, task
+                    distribution and Task completion.
+                  </p>
+                  <p>
+                    * • Manage Resources , Logistics , vendors and Tools needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+        <!-- Skills Cards  -->
+        
+      
       </section>
-
+    
       <!-- OLD DATA  -->
 
       <section class="follow">
         <p>Follow Me:</p>
+        
         <a
           href="http://www.linkedin.com/in/mayank-shah-9b594217"
           target="_blank"
-        >
-          <img src="img/linkedin.png" alt="MY_LINKEDIN" />
+        ><span><i class="fab fa-linkedin fa6"></i>
+        </span>
+      
+         
         </a>
         <a href="mailto:maaluv_81@yahoo.co.in">
-          <img src="img/email.png" alt="email_me" />
+          <span>
+            <i class="far fa-envelope"></i>
+            </span>
         </a>
+        <span>
+          <i class="fas fa-mobile-alt"> : 
+            +249-910066331</i>
+        </span>
       </section>
 
       <!-- links -->
@@ -223,5 +384,81 @@
         </div>
       </footer>
     </div>
+  </div>
+</div>
   </body>
+  <script>
+    function message(mydd) {
+      if ( (mydd ==1 )  )   
+      {
+        var eml = document.querySelectorAll(".employer");
+        var i;
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.remove('hides');
+        }
+         
+        eml = document.querySelectorAll(".role");
+        
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+
+        eml = document.querySelectorAll(".skill");
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+      }
+        // skills  
+      if ( (mydd ==2 )  )   
+      {
+        var eml = document.querySelectorAll(".employer");
+        var i;
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+         
+        eml = document.querySelectorAll(".role");
+        
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+
+        eml = document.querySelectorAll(".skill");
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.remove('hides');
+        }
+      }
+
+      if ( (mydd ==3 )  )   
+      {
+        var eml = document.querySelectorAll(".employer");
+        var i;
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+         
+        eml = document.querySelectorAll(".role");
+        
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.remove('hides');
+        }
+
+        eml = document.querySelectorAll(".skill");
+        for (i = 0; i < eml.length; i++) 
+        {
+        eml[i].classList.add('hides');
+        }
+      }
+       
+        
+      }
+  </script>
 </html>

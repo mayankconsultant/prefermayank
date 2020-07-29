@@ -1,5 +1,5 @@
 :root {
-  --prim_background: #000;
+  --prim_background: linear-gradient(60deg, darkcyan, black);
   --sec_background: white;
 
   --color_prim: whitesmoke;
@@ -14,7 +14,7 @@
 
 .container {
   width: 95%;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: auto;
 }
 
@@ -48,13 +48,15 @@ hr {
 }
 .textimg {
   margin: 10px;
-  width: 100%;
+  width: 65%;
   height: 400px;
   background: url("../img/me_front.jpg") no-repeat center center/cover;
 
   /* Add the blur effect */
   filter: blur(1px);
-  -webkit-filter: blur(1px);
+  /* filter: saturate(220%) contrast(200%); */
+
+  /* -webkit-filter: blur(2px); */
   padding: 10px 0px;
   margin: 25px 0px;
   display: flex;
@@ -62,6 +64,9 @@ hr {
   align-items: center;
   text-align: center;
   justify-content: flex-end;
+  border-bottom-right-radius: 300px;
+  border-top-right-radius: 300px;
+  border-top-left-radius: 200px;
 
   /* Full height */
   /* height: 100%; */
@@ -78,7 +83,7 @@ hr {
   font-weight: bolder;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 65%;
   overflow-wrap: normal;
   transform: translate(-50%, -50%);
@@ -112,6 +117,7 @@ hr {
   margin: 10px;
   color: turquoise;
   overflow-wrap: break-word;
+  font-family: "Poppins", sans-serif;
 }
 
 .container2 {
@@ -126,30 +132,45 @@ hr {
   grid-template-areas:
     "radio card1 card2 card3"
     "radio card4 card5 card6";
-  border: 5px solid white;
-  grid-template-rows: 2fr;
+  border: 5px solid pink;
+  /* grid-gap: 5px; */
+  /* grid-template-rows: 2fr; */
   /* margin-left: 10px; */
   /* margin-top: 32em; */
 }
 
-.card4 {
-  grid-area: card4;
-}
 .radio {
   color: whitesmoke;
   grid-area: radio;
+  /* justify-content: space-between; */
   width: 100%;
-  display: table-row;
+  display: grid;
+  align-items: stretch;
   text-decoration: none;
+  border: 3px solid pink;
+}
+
+.radio_input {
+  visibility: hidden;
+}
+
+.radio_input:checked + .label1 {
+  background-color: salmon;
 }
 
 .radio label {
   display: block;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   padding: 5px 5px;
   margin: 10px;
+  align-self: center;
   text-align: center;
-  background: lightseagreen;
+  cursor: pointer;
+  font-size: large;
+
+  transform: translate(0, -50%);
+
+  background-color: dodgerblue;
 }
 
 .card1 {
@@ -159,14 +180,64 @@ hr {
   grid-area: card3;
 }
 
+.card4 {
+  grid-area: card4;
+}
+
+.hides {
+  display: none;
+}
+
 .cards {
   background-color: transparent;
   width: 100%;
-  height: 200px;
+  height: 350px;
+
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
+.circle {
+  /* background: darkgoldenrod;
+  clip-path: circle(180px at center 0); */
+}
+.employer .flip-card-front {
+  /* background-color: rebeccapurple; */
+
+  background: url(../img/network-4851119_1920.jpg);
+  /* background: rgb(34, 193, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 73, 45, 1) 100%
+  ); */
+}
+
+.role .flip-card-front {
+  /* background-color: rgb(18, 202, 156); */
+  background: url(../img/network-4851119_1920.jpg);
+  filter: sepia();
+}
+
+.skill .flip-card-front {
+  /* background-color: lightcoral; */
+  /* background: rgb(34, 193, 195);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  ); */
+  background: url(../img/network-4851119_1920.jpg);
+  /* filter: grayscale(70%); */
+  filter: sepia(70%);
+  /* color: whitesmoke; */
+}
+
+.skill p,
+.role p,
+.employer p {
+  padding-top: 15px;
+}
 /* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
@@ -191,13 +262,26 @@ hr {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   text-align: center;
+  border-radius: 20px;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: rgb(10, 188, 194);
-  color: black;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  color: whitesmoke;
+  padding-top: 25px;
+
+  cursor: pointer;
+}
+
+.flip-card-front h1 {
+  text-align: center;
+  font-family: "Bitter", serif;
+}
+
+.flip-card-front p {
+  font-family: "Poppins", sans-serif;
 }
 
 /* Style the back side */
@@ -210,15 +294,6 @@ hr {
 
 /* card2  */
 
-.card2 {
-  background-color: transparent;
-  width: 100%;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  grid-area: card2;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
 /* This container is needed to position the front and back side */
 
 .follow {
@@ -230,8 +305,22 @@ hr {
   margin: 30px 0px 30px;
 }
 
-.follow * {
-  margin-right: 10px;
+.follow {
+  background: #f2f2f2;
+  font-size: 32px;
+  padding: 20px 0px;
+}
+
+.follow span {
+  padding: 0px 15px;
+}
+
+.follow span {
+  padding: 0px 15px;
+}
+
+.follow h3 {
+  padding: 15px;
 }
 
 /* links */
@@ -281,10 +370,21 @@ hr {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 380px) {
+.long {
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+@media screen and (max-width: 500px) {
+  .textimg {
+    /* filter: blur(1px); */
+    /* -webkit-filter: blur(1px); */
+  }
+
   .title {
-    width: 100%;
+    width: 60%;
     position: absolute;
+    font-weight: bolder;
   }
 
   .container2 {
@@ -303,6 +403,15 @@ hr {
 
   .radio label {
     width: 80%;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+    font-size: large;
+  }
+
+  .cards {
+    height: 200px;
   }
 
   .follow {
