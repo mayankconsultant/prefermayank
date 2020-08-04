@@ -53,7 +53,7 @@ hr {
   background: url("../img/me_front.jpg") no-repeat center center/cover;
 
   /* Add the blur effect */
-  filter: blur(1px);
+  /* filter: blur(1px); */
   /* filter: saturate(220%) contrast(200%); */
 
   /* -webkit-filter: blur(2px); */
@@ -131,7 +131,8 @@ hr {
   grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-template-areas:
     "radio card1 card2 card3"
-    "radio card4 card5 card6";
+    "radio card4 card5 card6"
+    "radio card7 card8 card9";
   border: 5px solid pink;
   /* grid-gap: 5px; */
   /* grid-template-rows: 2fr; */
@@ -262,7 +263,7 @@ hr {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   text-align: center;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -275,7 +276,8 @@ hr {
   cursor: pointer;
 }
 
-.flip-card-front h1 {
+.flip-card-front h1,
+h2 {
   text-align: center;
   font-family: "Bitter", serif;
 }
@@ -286,10 +288,15 @@ hr {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #457b9d;
   color: white;
   transform: rotateY(180deg);
   overflow: hidden;
+}
+
+.medium p {
+  font-size: large;
+  text-align: left;
 }
 
 /* card2  */
@@ -375,7 +382,7 @@ hr {
   font-size: x-large;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 850px) {
   .textimg {
     /* filter: blur(1px); */
     /* -webkit-filter: blur(1px); */
@@ -383,8 +390,66 @@ hr {
 
   .title {
     width: 60%;
+    top: 45%;
     position: absolute;
     font-weight: bolder;
+  }
+
+  .container2 {
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "radio radio"
+      "card1 card2"
+      "card3 card4"
+      "card5 card6";
+  }
+
+  .card3 {
+    grid-area: card3;
+  }
+  .hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .radio label {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+    font-size: large;
+  }
+
+  .cards {
+    height: 350px;
+  }
+
+  .long {
+    font-weight: bolder;
+    font-size: small;
+  }
+
+  .follow {
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .links-inner {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .textimg {
+    /* filter: blur(1px); */
+    /* -webkit-filter: blur(1px); */
+    width: 100%;
+  }
+
+  .title {
+    width: 60%;
+    position: absolute;
+    font-weight: bolder;
+    top: 45%;
   }
 
   .container2 {
@@ -414,8 +479,14 @@ hr {
     height: 200px;
   }
 
+  .long {
+    font-weight: bolder;
+    font-size: small;
+  }
+
   .follow {
     flex-direction: column;
+    align-content: space-between;
   }
   .links-inner {
     flex-direction: column;
